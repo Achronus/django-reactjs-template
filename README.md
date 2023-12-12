@@ -52,7 +52,15 @@ get_random_secret_key()
 
 6. Copy the secret key into the `.env` file, replacing `[KEY_HERE]`.
 
-7. Check everything works:
+7. Make the initial migrations for the database:
+```shell
+python manage.py makemigrations
+python manage.py migrate
+```
+
+_Note: `makemigrations` will return `no changes detected`._
+
+8. Check everything works (should see `hello world!`):
 ```shell
 python manage.py runserver
 ```
@@ -64,7 +72,7 @@ python manage.py runserver
 npm install
 ```
 
-2. Check it works:
+2. Check it works (should see `Home` underscored and bold):
 ```shell
 npm run dev
 ```
